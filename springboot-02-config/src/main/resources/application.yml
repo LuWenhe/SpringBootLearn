@@ -1,13 +1,37 @@
-person:
-  lastName: luwenhe
-  age: 33
-  boss: false
-  birth: 2019/1/5
-  maps: {k1: v1, k2: v2}
-  lists:
-    - lisi
-    - zhaoliu
-    - dd
-  dog:
-    name: xiaogou
-    age: 2
+server:
+    port: 8081
+spring:
+    profiles:
+        active: test  # 切换环境
+---
+# 开发环境
+server:
+    port: 8082
+spring:
+    profiles: dev
+---
+# 测试环境
+server:
+    port: 8083
+spring:
+    profiles: test
+---
+# 生产环境
+server:
+    port: 8084
+spring:
+    profiles: prop
+---
+#person:
+#  lastName: luwenhe
+#  age: 33
+#  boss: false
+#  birth: 2019/1/5
+#  maps: {k1: v1, k2: v2}
+#  lists:
+#    - lisi
+#    - zhaoliu
+#    - dd
+#  dog:
+#    name: xiaogou
+#    age: 2

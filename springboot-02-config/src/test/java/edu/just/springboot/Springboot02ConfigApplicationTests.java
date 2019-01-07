@@ -1,6 +1,7 @@
 package edu.just.springboot;
 
 import edu.just.springboot.bean.Car;
+import edu.just.springboot.bean.NumberTest;
 import edu.just.springboot.bean.People;
 import edu.just.springboot.bean.Person;
 import org.junit.Test;
@@ -29,6 +30,9 @@ public class Springboot02ConfigApplicationTests {
     private People people;
 
     @Autowired
+    private NumberTest numberTest;
+
+    @Autowired
     ApplicationContext applicationContext;
 
     @Test
@@ -51,6 +55,11 @@ public class Springboot02ConfigApplicationTests {
         // 判断 IOC 容器中是否包含名为 helloService 的 Bean
         boolean helloService = applicationContext.containsBean("helloService");
         System.out.println(helloService);
+    }
+
+    @Test
+    public void test4() {
+        System.out.println(numberTest);
     }
 
 }
