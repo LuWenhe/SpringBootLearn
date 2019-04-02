@@ -8,6 +8,9 @@ import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * @PropertySource: 从外部加载指定的配置文件，将配置文件与 JavaBean 相绑定，使 JavaBean 读取配置文件中的值
+ */
 @Component
 @ConfigurationProperties(prefix = "people")    // 对应配置文件中的前缀
 @PropertySource(value = {"classpath:people.properties"})    // 指定从类路径下的 people.properties 文件获取配置文件的值

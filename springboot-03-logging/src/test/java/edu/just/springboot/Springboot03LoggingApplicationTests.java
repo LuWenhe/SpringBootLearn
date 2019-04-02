@@ -17,7 +17,7 @@ public class Springboot03LoggingApplicationTests {
     @Test
     public void contextLoads() {
         // 日志的级别, 日志级别由低到高: trace < debug < info < warn < error
-        // 可以调整输出的日志级别
+        // 可以调整输出的日志级别，日志就只会在这个级别以后的高级别生效
         logger.trace("这是trace日志");
         logger.debug("这是debug日志");
         // SpringBoot 默认给我们使用的是 info 级别的日志, 如果我们没有自己指定日志级别，

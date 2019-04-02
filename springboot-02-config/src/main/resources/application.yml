@@ -22,16 +22,16 @@ server:
 spring:
     profiles: prop
 ---
-#person:
-#  lastName: luwenhe
-#  age: 33
-#  boss: false
-#  birth: 2019/1/5
-#  maps: {k1: v1, k2: v2}
-#  lists:
-#    - lisi
-#    - zhaoliu
-#    - dd
-#  dog:
-#    name: xiaogou
-#    age: 2
+person:
+  lastName: luwenhe
+  age: 33
+  boss: false
+  birth: 2019/1/5
+  maps: {k1: v1, k2: v2}
+  lists:
+    - lisi
+    - zhaoliu
+    - dd
+  dog:
+    name: xiaogou
+    age: 2
