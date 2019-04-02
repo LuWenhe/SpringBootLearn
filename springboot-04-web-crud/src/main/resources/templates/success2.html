@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    <!--
+        th:text: 对字符进行转义，页面上就是显示 <h3>...</h3
+        th:utext: 不对字符进行转义，页面显示加粗的字
+    -->
+    <div th:text="${hello}"></div>
+    <div th:utext="${hello}"></div>
+
+    <br>
+
+    <div th:text="${users}"></div>
+    <table>
+        <tr th:each="user: ${users}">
+            <td th:text="${user}"></td>
+        </tr>
+    </table>
+
+</body>
+</html>
