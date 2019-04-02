@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="edu.just.springboot.mapper.DepartmentMapper">
+    <select id="getDeptById" resultType="edu.just.springboot.bean.Department">
+        select id, depart_name departName from department where id = #{id}
+    </select>
+
+    <select id="getDepts" resultType="edu.just.springboot.bean.Department">
+        select id, depart_name departName from department
+    </select>
+
+    <insert id="addDept">
+        insert into department values(#{id}, #{departName})
+    </insert>
+
+    <delete id="deleteDept">
+        delete from department where id = #{id}
+    </delete>
+
+    <update id="updateDept">
+        update department set depart_name = #{departName} where id = #{id}
+    </update>
+    
+    <select id="getDeptsByIds" resultType="edu.just.springboot.bean.Department">
+        select * from department 
+        where id in 
+        <foreach collection="array" item="item" separator="," open="(" close=")">
+            #{item}
+        </foreach>
+    </select>
+
+    <select id="getDeptsByIdss" resultType="edu.just.springboot.bean.Department">
+        select * from department
+        where id in
+        <foreach collection="idsss" item="item" index="index" separator="," open="(" close=")">
+            #{item}
+        </foreach>
+    </select>
+
+    <select id="getDeptsByIdsss" resultType="edu.just.springboot.bean.Department">
+        select * from department
+        where
+        <foreach collection="idss" item="item" index="index" separator="or">
+            id = #{item}
+        </foreach>
+    </select>
+</mapper>
